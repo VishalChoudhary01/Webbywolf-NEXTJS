@@ -27,7 +27,8 @@ const inter = Inter({ subsets: ["latin"] });
 const Bikes = () => {
   return (
     <section className=" flex justify-end py-16 w-full">
-        <div className="flex justify-center p-8 shadow-2xl w-[92%] h-[989px]">
+        <div className=" shadow-2xl w-[92%] h-[989px] relative">
+            <div className="flex justify-center pt-8 px-8">
             {/* left */}
             <div className="w-1/2 max-w-[620px] p-2 relative">
                 <HeaderContent primaryContent="Lorem ipsum dolor sit" secondaryContent="Lorem ipsum dolor sit amet" descript="Lorem ipsum dolor sit amet consectetur. Amet sodales sociis facilisis donec dui. Mi porttitor ut aliquam mattis maecenas eget integer in nam. Non nisl iaculis at felis aliquet. Hendrerit tellus at purus lectus."/>
@@ -48,6 +49,9 @@ const Bikes = () => {
             </div>
             {/* Right */}
             <Image src={BikeImage} alt="bikes" className="w-1/2"/>
+            </div>
+            <div className="bg-linear-90 from-[#043898] via-[#079902] to-[#170041] w-[96%] h-8 absolute bottom-0"></div>
+
         </div>
 
     </section>
