@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import { Inter } from 'next/font/google';
 import Button from '../atoms/Button';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 const menuItems = [
   { label: 'Lorem Ipsum', options: ['Option 1', 'Option 2', 'Option 3'] },
@@ -22,9 +22,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='w-full fixed z-20 flex items-center justify-between xl:px-[5rem] py-3 '>
+    <nav className='w-full fixed z-20 flex items-center justify-between xl:px-[6.5rem] py-3 '>
       <Logo />
-      <ul className='flex gap-x-[2.9rem]'>
+      <ul className='flex gap-x-[3.2rem]'>
         {menuItems.map((item, index) => (
           <div key={index} className={`relative ${inter.className}`}>
             <div
