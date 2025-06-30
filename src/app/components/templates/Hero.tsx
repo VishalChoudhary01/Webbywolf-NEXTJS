@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import hero from "./../../../../public/images/hero/Hero.png";
@@ -7,6 +8,7 @@ import Button from "../atoms/Button";
 import bluetick from "./../../../../public/icons/bluetick.svg";
 import { FaArrowRight } from "react-icons/fa";
 import { Inter } from "next/font/google";
+import { motion } from "motion/react";
 
 // Importing Roboto Condensed font with specific weights and subsets
 const roboto_Condensed = Roboto_Condensed({
@@ -20,7 +22,11 @@ const Hero = () => {
     <section className="w-full flex flex-col md:pb-24 pb-14 ">
       <div className="w-full flex items-center ">
         {/* left */}
-        <div className="md:w-[60%] w-full   flex justify-center items-center md:pt-24 pt-20  md:px-0 px-2.5">
+        <motion.div
+        initial={{x:-100,opacity:0}}
+        whileInView={{x:0,opacity:1}}
+        transition={{duration:0.5}} 
+        className="md:w-[60%] w-full   flex justify-center items-center md:pt-24 pt-20  md:px-0 px-2.5">
           <div className="md:w-[696px] md:space-y-9 space-y-8">
             <h1
               className={`${roboto_Condensed.className} max-w-[528px] md:h-[140px] md:leading-16 leading-11 md:text-justify text-center font-bold xl:text-[64px] lg:text-[62px] md:text-[55px]  text-[40px]`}
@@ -44,7 +50,10 @@ const Hero = () => {
                   rightIcon={<FaArrowRight />}
                 />
               </div>
-              <div
+              <motion.div
+              initial={{y:180,opacity:0}}
+              whileInView={{y:0,opacity:1}}
+              transition={{duration:0.5}}
                 className={`flex items-center md:justify-start justify-center gap-x-3 ${inter.className} text-[15px]`}
               >
                 <Image
@@ -53,14 +62,19 @@ const Hero = () => {
                   className="md:w-[30px] md:h-[30px] w-[20px] h-[20px]"
                 />
                 <p>No credit card required!</p>
-              </div>
+              </motion.div>
             </div>
           </div>
-        </div>
+        </motion.div>
         {/* right */}
-        <div className="w-[40%] h-auto md:block hidden clip-diagonal ">
+        <motion.div 
+        initial={{x:120,opacity:0}}
+        whileInView={{x:0,opacity:1}}
+        transition={{duration:0.5}}
+        className="w-[40%] h-auto md:block hidden clip-diagonal ">
           <Image src={hero} alt="hero" className="object-fill" />
-        </div>
+        </motion.div>
+        
       </div>
       <div className="absolute bottom-0 w-full h-[60px] md:block hidden bg-gradient-to-t from-white to-transparent  "></div>
     </section>
