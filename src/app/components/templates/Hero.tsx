@@ -17,17 +17,17 @@ const inter = Inter({ subsets: ["latin"] });
 
 const Hero = () => {
   return (
-    <section className="w-full flex flex-col pb-24 ">
+    <section className="w-full flex flex-col md:pb-24 pb-14 ">
       <div className="w-full flex items-center ">
         {/* left */}
-        <div className="w-[60%]   flex justify-center items-center pt-24 ">
-          <div className="md:w-[696px] space-y-9">
+        <div className="md:w-[60%] w-full   flex justify-center items-center md:pt-24 pt-20  md:px-0 px-2.5">
+          <div className="md:w-[696px] md:space-y-9 space-y-8">
             <h1
-              className={`${roboto_Condensed.className} max-w-[528px] h-[140px] leading-16 font-bold xl:text-[64px] `}
+              className={`${roboto_Condensed.className} max-w-[528px] md:h-[140px] md:leading-16 leading-11 md:text-justify text-center font-bold xl:text-[64px] lg:text-[62px] md:text-[55px]  text-[40px]`}
             >
               Lorem ipsum dolor sit amet
             </h1>
-            <p className={`max-w-[520px]`}>
+            <p className={`max-w-[520px] md:text-justify text-center`}>
               Lorem ipsum dolor sit amet consectetur. Enim netus cras congue
               quis elit sociis. Sed mi rhoncus id habitant. In urna tellus nisi
               platea morbi libero imperdiet neque. Justo suspendisse tristique
@@ -35,22 +35,22 @@ const Hero = () => {
               habitasse.{" "}
             </p>
             <div className="flex flex-col gap-y-3">
-              <div className="flex gap-x-2 ">
+              <div className="flex gap-x-2 md:justify-start justify-center  ">
                 <Input InputStyle="outline-none border border-[#C3C3C3] max-w-[342px] max-h-[46px] xl:w-[342px] xl:h-[46px] rounded-[6px] p-2 caret-gray-500 " />
                 <Button
                   buttonText="Submit"
-                  buttonStyle={`flex items-center gap-x-2 rounded-[5px] text-[15px] max-w-[127px] md:w-[127px] justify-center h-[47px] bg-[#1959AC] text-white  ${inter.className}`}
+                  buttonStyle={`flex items-center gap-x-2 rounded-[5px] text-[15px] max-w-[127px] md:w-[127px] md:px-0 px-4 justify-center h-[42px] bg-[#1959AC] text-white  ${inter.className}`}
                   rightStyle="text-[15px]"
                   rightIcon={<FaArrowRight />}
                 />
               </div>
               <div
-                className={`flex items-center gap-x-3 ${inter.className} text-[15px]`}
+                className={`flex items-center md:justify-start justify-center gap-x-3 ${inter.className} text-[15px]`}
               >
                 <Image
                   src={bluetick}
                   alt="checked"
-                  className="w-[30px] h-[30px]"
+                  className="md:w-[30px] md:h-[30px] w-[20px] h-[20px]"
                 />
                 <p>No credit card required!</p>
               </div>
@@ -62,7 +62,7 @@ const Hero = () => {
           <Image src={hero} alt="hero" className="object-fill" />
         </div>
       </div>
-      <div className="absolute bottom-0 w-full h-[60px] bg-gradient-to-t from-white to-transparent mb "></div>
+      <div className="absolute bottom-0 w-full h-[60px] md:block hidden bg-gradient-to-t from-white to-transparent  "></div>
     </section>
   );
 };

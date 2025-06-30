@@ -11,7 +11,7 @@ interface ButtonProps {
 
 function Button({buttonText,buttonStyle = '',leftIcon,rightIcon,leftStyle = '',rightStyle = '',}: ButtonProps) {
   return (
-    <button className={buttonStyle}>
+    <button className={`${buttonStyle} hover:scale-105 duration-300 transition-all cursor-pointer`}>
       {leftIcon && <span className={leftStyle}>{leftIcon}</span>}
       <span>{buttonText}</span>
       {rightIcon && <span className={rightStyle}>{rightIcon}</span>}

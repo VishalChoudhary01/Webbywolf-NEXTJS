@@ -24,14 +24,14 @@ function HeaderContent({
   descript = '',
 }: HeaderContentProps) {
   return (
-    <div className="max-w-[593px]">
-      <h2 className={`text-[#0546D2] font-semibold ${inter.className} lg:text-[24px]`}>
+    <div className="max-w-[593px] md:w-[480px] space-y-3 md:text-justify text-center">
+      <h2 className={`text-[#0546D2]  font-semibold ${inter.className} lg:text-[24px] md:text-[20px] text-[18px]`}>
         {primaryContent}
       </h2>
-      <h3 className={`${roboto_Condensed.className} ${contentwidth} text-[#222222] md:text-[42px] font-bold`}>
+      <h3 className={`${roboto_Condensed.className} md:text-justify text-center ${contentwidth} text-[#222222] uppercase md:text-[42px] text-[30px] md:leading-11 leading-8 font-bold`}>
         {secondaryContent}
       </h3>
-      <p>{descript}</p>
+      <p className='md:text-[15px] text-[14px]'>{descript}</p>
     </div>
   );
 }
